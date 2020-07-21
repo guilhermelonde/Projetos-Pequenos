@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ExibeTraducoesRealizadas</class>
+ <widget class="QDialog" name="ExibeTraducoesRealizadas">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>691</width>
+    <height>464</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_3">
+   <item row="0" column="0">
+    <layout class="QGridLayout" name="gridLayout_2">
+     <item row="0" column="5">
+      <widget class="QSpinBox" name="largurasTraducoes"/>
+     </item>
+     <item row="0" column="4">
+      <widget class="QLabel" name="labelLargurasTraducoes">
+       <property name="text">
+        <string>Largura das colunas de traduções:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QLabel" name="labelLargurasPalavras">
+       <property name="text">
+        <string>Largura das colunas de palavras:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3">
+      <widget class="QSpinBox" name="largurasPalavras"/>
+     </item>
+     <item row="0" column="1">
+      <widget class="QSpinBox" name="QtColunas"/>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="labelColunas">
+       <property name="text">
+        <string>Colunas:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="6">
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item row="1" column="0">
+    <widget class="QScrollArea" name="scrollArea">
+     <property name="sizeAdjustPolicy">
+      <enum>QAbstractScrollArea::AdjustToContents</enum>
+     </property>
+     <property name="widgetResizable">
+      <bool>true</bool>
+     </property>
+     <widget class="QWidget" name="scrollAreaWidgetContents">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>1226</width>
+        <height>398</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="0" column="0">
+        <layout class="QGridLayout" name="TextoLayout">
+         <item row="0" column="0">
+          <widget class="QLabel" name="TextoCor1">
+           <property name="font">
+            <font>
+             <family>Monospace</family>
+             <pointsize>10</pointsize>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QLabel{
+	color: rgb(0, 9, 198);
+}</string>
+           </property>
+           <property name="text">
+            <string>exemplo de texto azul e bem
+grande e com mais de uma
+linha quase dando um parágrafo
+inteirinho</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLabel" name="TextoCor2">
+           <property name="font">
+            <font>
+             <family>Monospace</family>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QLabel{
+	color: rgb(175, 0, 0);
+}</string>
+           </property>
+           <property name="text">
+            <string>exemplo de texto vermelho e com uma linha bem mais longa que o texto em azul aqui do lado viu, presta atenção no detalhe</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
