@@ -1,0 +1,1117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>250</width>
+    <height>344</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>250</width>
+    <height>344</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>250</width>
+    <height>344</height>
+   </size>
+  </property>
+  <property name="cursor">
+   <cursorShape>ArrowCursor</cursorShape>
+  </property>
+  <property name="windowTitle">
+   <string>Calculadora</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow{
+background-color: rgb(47, 47, 47);
+}</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QLineEdit" name="texto">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>231</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Normal</enum>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="abreParanteses">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>90</y>
+      <width>51</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Myriad Pro</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	background-color: qlineargradient(spread:reflect, x1:0.505682, y1:1, x2:0.528727, y2:0, stop:0 rgba(59, 59, 59, 255), stop:1 rgba(109, 109, 109, 255));
+	border-style: outset;
+    border-width: 2px;
+    border-color: rgb(70, 70, 70);
+    border-radius: 5px;
+	color: lightgrey;
+}
+QPushButton:hover {
+	background-color:  qlineargradient(spread:reflect, x1:0.505682, y1:1, x2:0.528727, y2:0, stop:0 rgba(99, 99, 99, 255), stop:1 rgba(147, 147, 147, 255));
+    border-color: rgb(90, 90, 90);
+	color: white;
+}
+QPushButton:pressed {
+	background-color: qlineargradient(spread:reflect, x1:0.505682, y1:1, x2:0.528727, y2:0, stop:0 rgba(59, 59, 59, 255), stop:1 rgba(109, 109, 109, 255));
+	border-style: inset;
+    border-width: 2px;
+    border-color: rgb(70, 70, 70);
+    border-radius: 5px;
+	color: lightgrey;
+}</string>
+    </property>
+    <property name="text">
+     <string>(</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="fechaParenteses">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>90</y>
+      <width>51</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Myriad Pro</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	background-color: qlineargradient(spread:reflect, x1:0.505682, y1:1, x2:0.528727, y2:0, stop:0 rgba(59, 59, 59, 255), stop:1 rgba(109, 109, 109, 255));
+	border-style: outset;
+    border-width: 2px;
+    border-color: rgb(70, 70, 70);
+    border-radius: 5px;
+	color: lightgrey;
+}
+QPushButton:hover {
+	background-color:  qlineargradient(spread:reflect, x1:0.505682, y1:1, x2:0.528727, y2:0, stop:0 rgba(99, 99, 99, 255), stop:1 rgba(147, 147, 147, 255));
+    border-color: rgb(90, 90, 90);
+	color: white;
+}
+QPushButton:pressed {
+	background-color: qlineargradient(spread:reflect, x1:0.505682, y1:1, x2:0.528727, y2:0, stop:0 rgba(59, 59, 59, 255), stop:1 rgba(109, 109, 109, 255));
+	border-style: inset;
+    border-width: 2px;
+    border-color: rgb(70, 70, 70);
+    border-radius: 5px;
+	color: lightgrey;
+}</string>
+    </property>
+    <property name="text">
+     <string>)</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="limpar">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>50</y>
+      <width>51</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Myriad Pro</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	background-color: qlineargradient(spread:reflect, x1:0.505682, y1:1, x2:0.528727, y2:0, stop:0 rgba(128, 0, 0, 255), stop:1 rgba(196, 0, 0, 255));
+	border-style: outset;
+    border-width: 2px;
+    border-color: rgb(140, 0, 0);
+    border-radius: 5px;
+	color: lightgrey;
+}
+QPushButton:hover {
+	background-color:  qlineargradient(spread:reflect, x1:0.505682, y1:1, x2:0.528727, y2:0, stop:0 rgba(185, 0, 0, 255), stop:1 rgba(255, 0, 0, 255));
+    border-color: rgb(180, 0, 0);
+	color: white;
+}
+QPushButton:pressed {
+	background-color: qlineargradient(spread:reflect, x1:0.505682, y1:1, x2:0.528727, y2:0, stop:0 rgba(128, 0, 0, 255), stop:1 rgba(196, 0, 0, 255));
+	border-style: inset;
+    border-width: 2px;
+    border-color: rgb(140, 0, 0);
+    border-radius: 5px;
+	color: lightgrey;
+}</string>
+    </property>
+    <property name="text">
+     <string>CE</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="mais">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>90</y>
+      <width>51</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Myriad Pro</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	background-color: qlineargradient(spread:reflect, x1:0.505682, y1:1, x2:0.528727, y2:0, stop:0 rgba(59, 59, 59, 255), stop:1 rgba(109, 109, 109, 255));
+	border-style: outset;
+    border-width: 2px;
+    border-color: rgb(70, 70, 70);
+    border-radius: 5px;
+	color: lightgrey;
+}
+QPushButton:hover {
+	background-color:  qlineargradient(spread:reflect, x1:0.505682, y1:1, x2:0.528727, y2:0, stop:0 rgba(99, 99, 99, 255), stop:1 rgba(147, 147, 147, 255));
+    border-color: rgb(90, 90, 90);
+	color: white;
+}
+QPushButton:pressed {
+	background-color: qlineargradient(spread:reflect, x1:0.505682, y1:1, x2:0.528727, y2:0, stop:0 rgba(59, 59, 59, 255), stop:1 rgba(109, 109, 109, 255));
+	border-style: inset;
+    border-width: 2px;
+    border-color: rgb(70, 70, 70);
+    border-radius: 5px;
+	color: lightgrey;
+}</string>
+    </property>
+    <property name="text">
+     <string>+</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="menos">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>130</y>
+      <width>51</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Myriad Pro</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	background-color: qlineargradient(spread:reflect, x1:0.505682, y1:1, x2:0.528727, y2:0, stop:0 rgba(59, 59, 59, 255), stop:1 rgba(109, 109, 109, 255));
+	border-style: outset;
+    border-width: 2px;
+    border-color: rgb(70, 70, 70);
+    border-radius: 5px;
+	color: lightgrey;
+}
+QPushButton:hover {
+	background-color:  qlineargradient(spread:reflect, x1:0.505682, y1:1, x2:0.528727, y2:0, stop:0 rgba(99, 99, 99, 255), stop:1 rgba(147, 147, 147, 255));
+    border-color: rgb(90, 90, 90);
+	color: white;
+}
+QPushButton:pressed {
+	background-color: qlineargradient(spread:reflect, x1:0.505682, y1:1, x2:0.528727, y2:0, stop:0 rgba(59, 59, 59, 255), stop:1 rgba(109, 109, 109, 255));
+	border-style: inset;
+    border-width: 2px;
+    border-color: rgb(70, 70, 70);
+    border-radius: 5px;
+	color: lightgrey;
+}</string>
+    </property>
+    <property name="text">
+     <string>-</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="vezes">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>170</y>
+      <width>51</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Myriad Pro</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	background-color: qlineargradient(spread:reflect, x1:0.505682, y1:1, x2:0.528727, y2:0, stop:0 rgba(59, 59, 59, 255), stop:1 rgba(109, 109, 109, 255));
+	border-style: outset;
+    border-width: 2px;
+    border-color: rgb(70, 70, 70);
+    border-radius: 5px;
+	color: lightgrey;
+}
+QPushButton:hover {
+	background-color:  qlineargradient(spread:reflect, x1:0.505682, y1:1, x2:0.528727, y2:0, stop:0 rgba(99, 99, 99, 255), stop:1 rgba(147, 147, 147, 255));
+    border-color: rgb(90, 90, 90);
+	color: white;
+}
+QPushButton:pressed {
+	background-color: qlineargradient(spread:reflect, x1:0.505682, y1:1, x2:0.528727, y2:0, stop:0 rgba(59, 59, 59, 255), stop:1 rgba(109, 109, 109, 255));
+	border-style: inset;
+    border-width: 2px;
+    border-color: rgb(70, 70, 70);
+    border-radius: 5px;
+	color: lightgrey;
+}</string>
+    </property>
+    <property name="text">
+     <string>*</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="dividir">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>210</y>
+      <width>51</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Myriad Pro</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	background-color: qlineargradient(spread:reflect, x1:0.505682, y1:1, x2:0.528727, y2:0, stop:0 rgba(59, 59, 59, 255), stop:1 rgba(109, 109, 109, 255));
+	border-style: outset;
+    border-width: 2px;
+    border-color: rgb(70, 70, 70);
+    border-radius: 5px;
+	color: lightgrey;
+}
+QPushButton:hover {
+	background-color:  qlineargradient(spread:reflect, x1:0.505682, y1:1, x2:0.528727, y2:0, stop:0 rgba(99, 99, 99, 255), stop:1 rgba(147, 147, 147, 255));
+    border-color: rgb(90, 90, 90);
+	color: white;
+}
+QPushButton:pressed {
+	background-color: qlineargradient(spread:reflect, x1:0.505682, y1:1, x2:0.528727, y2:0, stop:0 rgba(59, 59, 59, 255), stop:1 rgba(109, 109, 109, 255));
+	border-style: inset;
+    border-width: 2px;
+    border-color: rgb(70, 70, 70);
+    border-radius: 5px;
+	color: lightgrey;
+}</string>
+    </property>
+    <property name="text">
+     <string>/</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="elevar">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>250</y>
+      <width>51</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Myriad Pro</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	background-color: qlineargradient(spread:reflect, x1:0.505682, y1:1, x2:0.528727, y2:0, stop:0 rgba(59, 59, 59, 255), stop:1 rgba(109, 109, 109, 255));
+	border-style: outset;
+    border-width: 2px;
+    border-color: rgb(70, 70, 70);
+    border-radius: 5px;
+	color: lightgrey;
+}
+QPushButton:hover {
+	background-color:  qlineargradient(spread:reflect, x1:0.505682, y1:1, x2:0.528727, y2:0, stop:0 rgba(99, 99, 99, 255), stop:1 rgba(147, 147, 147, 255));
+    border-color: rgb(90, 90, 90);
+	color: white;
+}
+QPushButton:pressed {
+	background-color: qlineargradient(spread:reflect, x1:0.505682, y1:1, x2:0.528727, y2:0, stop:0 rgba(59, 59, 59, 255), stop:1 rgba(109, 109, 109, 255));
+	border-style: inset;
+    border-width: 2px;
+    border-color: rgb(70, 70, 70);
+    border-radius: 5px;
+	color: lightgrey;
+}</string>
+    </property>
+    <property name="text">
+     <string>^</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="igual">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>250</y>
+      <width>51</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Myriad Pro</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	background-color: qlineargradient(spread:reflect, x1:0.505682, y1:1, x2:0.528727, y2:0, stop:0 rgba(23, 102, 23, 255), stop:1 rgba(50, 165, 50, 255));
+	border-style: outset;
+    border-width: 2px;
+    border-color: rgb(0, 100, 0);
+    border-radius: 5px;
+	color: lightgrey;
+}
+QPushButton:hover {
+	background-color:  qlineargradient(spread:reflect, x1:0.505682, y1:1, x2:0.528727, y2:0, stop:0 rgba(33, 144, 33, 255), stop:1 rgba(63, 207, 63, 255));
+    border-color: rgb(0, 140, 0);
+	color: white;
+}
+QPushButton:pressed {
+	background-color: qlineargradient(spread:reflect, x1:0.505682, y1:1, x2:0.528727, y2:0, stop:0 rgba(23, 102, 23, 255), stop:1 rgba(50, 165, 50, 255));
+	border-style: inset;
+    border-width: 2px;
+    border-color: rgb(0, 100, 0);
+    border-radius: 5px;
+	color: lightgrey;
+}</string>
+    </property>
+    <property name="text">
+     <string>=</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="tres">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>130</y>
+      <width>51</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Myriad Pro</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	background-color: qlineargradient(spread:reflect, x1:0.505682, y1:1, x2:0.528727, y2:0, stop:0 rgba(14, 14, 77, 255), stop:1 rgba(22, 41, 122, 255));
+	border-style: outset;
+    border-width: 2px;
+    border-color: rgb(24, 25, 76);
+    border-radius: 5px;
+	color: lightgrey;
+}
+QPushButton:hover {
+	background-color:  qlineargradient(spread:reflect, x1:0.505682, y1:1, x2:0.528727, y2:0, stop:0 rgba(33, 56, 129, 255), stop:1 rgba(29, 57, 180, 255));
+    border-color: rgb(27, 29, 134);
+	color: white;
+}
+QPushButton:pressed {
+	background-color: qlineargradient(spread:reflect, x1:0.505682, y1:1, x2:0.528727, y2:0, stop:0 rgba(14, 14, 77, 255), stop:1 rgba(22, 41, 122, 255));
+	border-style: inset;
+    border-width: 2px;
+    border-color: rgb(24, 25, 76);
+    border-radius: 5px;
+	color: lightgrey;
+}</string>
+    </property>
+    <property name="text">
+     <string>3</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="dois">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>130</y>
+      <width>51</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Myriad Pro</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	background-color: qlineargradient(spread:reflect, x1:0.505682, y1:1, x2:0.528727, y2:0, stop:0 rgba(14, 14, 77, 255), stop:1 rgba(22, 41, 122, 255));
+	border-style: outset;
+    border-width: 2px;
+    border-color: rgb(24, 25, 76);
+    border-radius: 5px;
+	color: lightgrey;
+}
+QPushButton:hover {
+	background-color:  qlineargradient(spread:reflect, x1:0.505682, y1:1, x2:0.528727, y2:0, stop:0 rgba(33, 56, 129, 255), stop:1 rgba(29, 57, 180, 255));
+    border-color: rgb(27, 29, 134);
+	color: white;
+}
+QPushButton:pressed {
+	background-color: qlineargradient(spread:reflect, x1:0.505682, y1:1, x2:0.528727, y2:0, stop:0 rgba(14, 14, 77, 255), stop:1 rgba(22, 41, 122, 255));
+	border-style: inset;
+    border-width: 2px;
+    border-color: rgb(24, 25, 76);
+    border-radius: 5px;
+	color: lightgrey;
+}</string>
+    </property>
+    <property name="text">
+     <string>2</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="um">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>130</y>
+      <width>51</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Myriad Pro</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	background-color: qlineargradient(spread:reflect, x1:0.505682, y1:1, x2:0.528727, y2:0, stop:0 rgba(14, 14, 77, 255), stop:1 rgba(22, 41, 122, 255));
+	border-style: outset;
+    border-width: 2px;
+    border-color: rgb(24, 25, 76);
+    border-radius: 5px;
+	color: lightgrey;
+}
+QPushButton:hover {
+	background-color:  qlineargradient(spread:reflect, x1:0.505682, y1:1, x2:0.528727, y2:0, stop:0 rgba(33, 56, 129, 255), stop:1 rgba(29, 57, 180, 255));
+    border-color: rgb(27, 29, 134);
+	color: white;
+}
+QPushButton:pressed {
+	background-color: qlineargradient(spread:reflect, x1:0.505682, y1:1, x2:0.528727, y2:0, stop:0 rgba(14, 14, 77, 255), stop:1 rgba(22, 41, 122, 255));
+	border-style: inset;
+    border-width: 2px;
+    border-color: rgb(24, 25, 76);
+    border-radius: 5px;
+	color: lightgrey;
+}</string>
+    </property>
+    <property name="text">
+     <string>1</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="seis">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>170</y>
+      <width>51</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Myriad Pro</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	background-color: qlineargradient(spread:reflect, x1:0.505682, y1:1, x2:0.528727, y2:0, stop:0 rgba(14, 14, 77, 255), stop:1 rgba(22, 41, 122, 255));
+	border-style: outset;
+    border-width: 2px;
+    border-color: rgb(24, 25, 76);
+    border-radius: 5px;
+	color: lightgrey;
+}
+QPushButton:hover {
+	background-color:  qlineargradient(spread:reflect, x1:0.505682, y1:1, x2:0.528727, y2:0, stop:0 rgba(33, 56, 129, 255), stop:1 rgba(29, 57, 180, 255));
+    border-color: rgb(27, 29, 134);
+	color: white;
+}
+QPushButton:pressed {
+	background-color: qlineargradient(spread:reflect, x1:0.505682, y1:1, x2:0.528727, y2:0, stop:0 rgba(14, 14, 77, 255), stop:1 rgba(22, 41, 122, 255));
+	border-style: inset;
+    border-width: 2px;
+    border-color: rgb(24, 25, 76);
+    border-radius: 5px;
+	color: lightgrey;
+}</string>
+    </property>
+    <property name="text">
+     <string>6</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="cinco">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>170</y>
+      <width>51</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Myriad Pro</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	background-color: qlineargradient(spread:reflect, x1:0.505682, y1:1, x2:0.528727, y2:0, stop:0 rgba(14, 14, 77, 255), stop:1 rgba(22, 41, 122, 255));
+	border-style: outset;
+    border-width: 2px;
+    border-color: rgb(24, 25, 76);
+    border-radius: 5px;
+	color: lightgrey;
+}
+QPushButton:hover {
+	background-color:  qlineargradient(spread:reflect, x1:0.505682, y1:1, x2:0.528727, y2:0, stop:0 rgba(33, 56, 129, 255), stop:1 rgba(29, 57, 180, 255));
+    border-color: rgb(27, 29, 134);
+	color: white;
+}
+QPushButton:pressed {
+	background-color: qlineargradient(spread:reflect, x1:0.505682, y1:1, x2:0.528727, y2:0, stop:0 rgba(14, 14, 77, 255), stop:1 rgba(22, 41, 122, 255));
+	border-style: inset;
+    border-width: 2px;
+    border-color: rgb(24, 25, 76);
+    border-radius: 5px;
+	color: lightgrey;
+}</string>
+    </property>
+    <property name="text">
+     <string>5</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="quatro">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>170</y>
+      <width>51</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Myriad Pro</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	background-color: qlineargradient(spread:reflect, x1:0.505682, y1:1, x2:0.528727, y2:0, stop:0 rgba(14, 14, 77, 255), stop:1 rgba(22, 41, 122, 255));
+	border-style: outset;
+    border-width: 2px;
+    border-color: rgb(24, 25, 76);
+    border-radius: 5px;
+	color: lightgrey;
+}
+QPushButton:hover {
+	background-color:  qlineargradient(spread:reflect, x1:0.505682, y1:1, x2:0.528727, y2:0, stop:0 rgba(33, 56, 129, 255), stop:1 rgba(29, 57, 180, 255));
+    border-color: rgb(27, 29, 134);
+	color: white;
+}
+QPushButton:pressed {
+	background-color: qlineargradient(spread:reflect, x1:0.505682, y1:1, x2:0.528727, y2:0, stop:0 rgba(14, 14, 77, 255), stop:1 rgba(22, 41, 122, 255));
+	border-style: inset;
+    border-width: 2px;
+    border-color: rgb(24, 25, 76);
+    border-radius: 5px;
+	color: lightgrey;
+}</string>
+    </property>
+    <property name="text">
+     <string>4</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="sete">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>210</y>
+      <width>51</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Myriad Pro</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	background-color: qlineargradient(spread:reflect, x1:0.505682, y1:1, x2:0.528727, y2:0, stop:0 rgba(14, 14, 77, 255), stop:1 rgba(22, 41, 122, 255));
+	border-style: outset;
+    border-width: 2px;
+    border-color: rgb(24, 25, 76);
+    border-radius: 5px;
+	color: lightgrey;
+}
+QPushButton:hover {
+	background-color:  qlineargradient(spread:reflect, x1:0.505682, y1:1, x2:0.528727, y2:0, stop:0 rgba(33, 56, 129, 255), stop:1 rgba(29, 57, 180, 255));
+    border-color: rgb(27, 29, 134);
+	color: white;
+}
+QPushButton:pressed {
+	background-color: qlineargradient(spread:reflect, x1:0.505682, y1:1, x2:0.528727, y2:0, stop:0 rgba(14, 14, 77, 255), stop:1 rgba(22, 41, 122, 255));
+	border-style: inset;
+    border-width: 2px;
+    border-color: rgb(24, 25, 76);
+    border-radius: 5px;
+	color: lightgrey;
+}</string>
+    </property>
+    <property name="text">
+     <string>7</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="oito">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>210</y>
+      <width>51</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Myriad Pro</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	background-color: qlineargradient(spread:reflect, x1:0.505682, y1:1, x2:0.528727, y2:0, stop:0 rgba(14, 14, 77, 255), stop:1 rgba(22, 41, 122, 255));
+	border-style: outset;
+    border-width: 2px;
+    border-color: rgb(24, 25, 76);
+    border-radius: 5px;
+	color: lightgrey;
+}
+QPushButton:hover {
+	background-color:  qlineargradient(spread:reflect, x1:0.505682, y1:1, x2:0.528727, y2:0, stop:0 rgba(33, 56, 129, 255), stop:1 rgba(29, 57, 180, 255));
+    border-color: rgb(27, 29, 134);
+	color: white;
+}
+QPushButton:pressed {
+	background-color: qlineargradient(spread:reflect, x1:0.505682, y1:1, x2:0.528727, y2:0, stop:0 rgba(14, 14, 77, 255), stop:1 rgba(22, 41, 122, 255));
+	border-style: inset;
+    border-width: 2px;
+    border-color: rgb(24, 25, 76);
+    border-radius: 5px;
+	color: lightgrey;
+}</string>
+    </property>
+    <property name="text">
+     <string>8</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="nove">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>210</y>
+      <width>51</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Myriad Pro</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	background-color: qlineargradient(spread:reflect, x1:0.505682, y1:1, x2:0.528727, y2:0, stop:0 rgba(14, 14, 77, 255), stop:1 rgba(22, 41, 122, 255));
+	border-style: outset;
+    border-width: 2px;
+    border-color: rgb(24, 25, 76);
+    border-radius: 5px;
+	color: lightgrey;
+}
+QPushButton:hover {
+	background-color:  qlineargradient(spread:reflect, x1:0.505682, y1:1, x2:0.528727, y2:0, stop:0 rgba(33, 56, 129, 255), stop:1 rgba(29, 57, 180, 255));
+    border-color: rgb(27, 29, 134);
+	color: white;
+}
+QPushButton:pressed {
+	background-color: qlineargradient(spread:reflect, x1:0.505682, y1:1, x2:0.528727, y2:0, stop:0 rgba(14, 14, 77, 255), stop:1 rgba(22, 41, 122, 255));
+	border-style: inset;
+    border-width: 2px;
+    border-color: rgb(24, 25, 76);
+    border-radius: 5px;
+	color: lightgrey;
+}</string>
+    </property>
+    <property name="text">
+     <string>9</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="zero">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>250</y>
+      <width>51</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Myriad Pro</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	background-color: qlineargradient(spread:reflect, x1:0.505682, y1:1, x2:0.528727, y2:0, stop:0 rgba(14, 14, 77, 255), stop:1 rgba(22, 41, 122, 255));
+	border-style: outset;
+    border-width: 2px;
+    border-color: rgb(24, 25, 76);
+    border-radius: 5px;
+	color: lightgrey;
+}
+QPushButton:hover {
+	background-color:  qlineargradient(spread:reflect, x1:0.505682, y1:1, x2:0.528727, y2:0, stop:0 rgba(33, 56, 129, 255), stop:1 rgba(29, 57, 180, 255));
+    border-color: rgb(27, 29, 134);
+	color: white;
+}
+QPushButton:pressed {
+	background-color: qlineargradient(spread:reflect, x1:0.505682, y1:1, x2:0.528727, y2:0, stop:0 rgba(14, 14, 77, 255), stop:1 rgba(22, 41, 122, 255));
+	border-style: inset;
+    border-width: 2px;
+    border-color: rgb(24, 25, 76);
+    border-radius: 5px;
+	color: lightgrey;
+}</string>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>290</y>
+      <width>211</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>7</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+color: white;
+}</string>
+    </property>
+    <property name="text">
+     <string>Guilherme Pereira Porto Londe
+2015100280357-7
+Estrutura de Dados I - C01</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="backspace">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>90</y>
+      <width>51</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Myriad Pro</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	background-color: qlineargradient(spread:reflect, x1:0.505682, y1:1, x2:0.528727, y2:0, stop:0 rgba(128, 0, 0, 255), stop:1 rgba(196, 0, 0, 255));
+	border-style: outset;
+    border-width: 2px;
+    border-color: rgb(140, 0, 0);
+    border-radius: 5px;
+	color: lightgrey;
+}
+QPushButton:hover {
+	background-color:  qlineargradient(spread:reflect, x1:0.505682, y1:1, x2:0.528727, y2:0, stop:0 rgba(185, 0, 0, 255), stop:1 rgba(255, 0, 0, 255));
+    border-color: rgb(180, 0, 0);
+	color: white;
+}
+QPushButton:pressed {
+	background-color: qlineargradient(spread:reflect, x1:0.505682, y1:1, x2:0.528727, y2:0, stop:0 rgba(128, 0, 0, 255), stop:1 rgba(196, 0, 0, 255));
+	border-style: inset;
+    border-width: 2px;
+    border-color: rgb(140, 0, 0);
+    border-radius: 5px;
+	color: lightgrey;
+}</string>
+    </property>
+    <property name="text">
+     <string>←</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="ponto">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>250</y>
+      <width>51</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Myriad Pro</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	background-color: qlineargradient(spread:reflect, x1:0.505682, y1:1, x2:0.528727, y2:0, stop:0 rgba(14, 14, 77, 255), stop:1 rgba(22, 41, 122, 255));
+	border-style: outset;
+    border-width: 2px;
+    border-color: rgb(24, 25, 76);
+    border-radius: 5px;
+	color: lightgrey;
+}
+QPushButton:hover {
+	background-color:  qlineargradient(spread:reflect, x1:0.505682, y1:1, x2:0.528727, y2:0, stop:0 rgba(33, 56, 129, 255), stop:1 rgba(29, 57, 180, 255));
+    border-color: rgb(27, 29, 134);
+	color: white;
+}
+QPushButton:pressed {
+	background-color: qlineargradient(spread:reflect, x1:0.505682, y1:1, x2:0.528727, y2:0, stop:0 rgba(14, 14, 77, 255), stop:1 rgba(22, 41, 122, 255));
+	border-style: inset;
+    border-width: 2px;
+    border-color: rgb(24, 25, 76);
+    border-radius: 5px;
+	color: lightgrey;
+}</string>
+    </property>
+    <property name="text">
+     <string>.</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>250</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>backspace</tabstop>
+  <tabstop>abreParanteses</tabstop>
+  <tabstop>fechaParenteses</tabstop>
+  <tabstop>mais</tabstop>
+  <tabstop>um</tabstop>
+  <tabstop>dois</tabstop>
+  <tabstop>tres</tabstop>
+  <tabstop>menos</tabstop>
+  <tabstop>quatro</tabstop>
+  <tabstop>cinco</tabstop>
+  <tabstop>seis</tabstop>
+  <tabstop>vezes</tabstop>
+  <tabstop>sete</tabstop>
+  <tabstop>oito</tabstop>
+  <tabstop>nove</tabstop>
+  <tabstop>dividir</tabstop>
+  <tabstop>limpar</tabstop>
+  <tabstop>zero</tabstop>
+  <tabstop>igual</tabstop>
+  <tabstop>elevar</tabstop>
+  <tabstop>texto</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
